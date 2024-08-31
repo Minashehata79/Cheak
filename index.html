@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h3>abc</h3>
+  <script>
+  window.onload = function() {
+    // الحصول على الـ URL الحالي
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // الحصول على قيمة "package" من المعاملات في الرابط
+    const packageName = urlParams.get('package');
+    
+    // افترض أن اسم الحزمة الخاص بالتطبيق الذي تريد التحقق منه هو "com.example.app"
+    if (packageName === "com.samsung.android.app.notes") {
+        // افتح موقع أو قم بأي عملية تريدها
+        window.location.href = "https://example.com"; // يمكن استبدال الرابط بالرابط الذي تريده
+    } else {
+        // إذا لم يكن اسم الحزمة متوافق، اعرض رسالة تنبيهية
+        alert("أنت قادم من مصدر آخر!");
+    }
+};
+</script>
+</body>
+</html>
