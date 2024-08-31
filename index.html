@@ -9,22 +9,21 @@
 <body>
   
   <h3>abc</h3>
-  <script>
+
   <script>
   window.onload = function() {
-    // التحقق من User Agent لمعرفة إذا كان المستخدم يستخدم تطبيق
+    // الحصول على الـ User Agent للمستخدم
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // التحقق من نوع التطبيق - يمكن تعديل الشرط بناءً على التطبيق المحدد
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
-      // فتح الموقع إذا كان المستخدم من تطبيق جوال
-      window.location.href = "https://www.example.com";
+    // تحقق مما إذا كان المستخدم يأتي من تطبيق معين
+    if (userAgent.includes("اسم_الـ_User_Agent_لتطبيقك")) {
+      // السماح بفتح الموقع
+      console.log("تم الدخول من التطبيق المسموح.");
     } else {
-      // عدم فتح الموقع إذا لم يكن المستخدم من التطبيق
-      console.log("تم الدخول من غير التطبيق.");
+      // منع الوصول إذا لم يكن المستخدم من التطبيق
+    document.body.innerHTML = "<h1>الوصول مرفوض</h1><p>لا يمكنك الوصول إلى هذا الموقع من مصدر غير مصرح به.</p>";
     }
   };
-</script>
 </script>
 </body>
 </html>
