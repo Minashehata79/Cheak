@@ -15,15 +15,15 @@
     // الحصول على الـ User Agent للمستخدم
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // تحقق مما إذا كان المستخدم يأتي من تطبيق معين
-    if (userAgent.includes("link")) {
+    // التحقق مما إذا كان المستخدم يدخل من تطبيق "Movie Hup"
+    if (userAgent.includes("linkUserAgent")) {  // استبدل "MovieHupUserAgent" بالـ User Agent الفعلي
       // السماح بفتح الموقع
-      console.log("تم الدخول من التطبيق المسموح.");
+      console.log("تم الدخول من تطبيق Movie Hup.");
     } else {
       // منع الوصول إذا لم يكن المستخدم من التطبيق
-    document.body.innerHTML = "<h1>الوصول مرفوض</h1><p>لا يمكنك الوصول إلى هذا الموقع من مصدر غير مصرح به.</p>";
+      document.body.innerHTML = "<h1>الوصول مرفوض</h1><p>يجب عليك الدخول من تطبيق Movie Hup للوصول إلى هذا الموقع.</p>";
     }
   };
-</script>
+  </script>
 </body>
 </html>
